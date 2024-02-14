@@ -1,0 +1,22 @@
+@media screen and (min-width: 601px) {
+  .text-dimension {
+	font-size: 0.9em;
+  }
+	
+}
+
+@media screen and (max-width: 600px) {
+	.text-dimension {
+	font-size: 0.7em;
+  }
+  
+}
+
+.footer-css {
+  background-color: #633a58;
+  color: #fff;
+}
+
+.documents-link {
+  color: #fff;
+}
