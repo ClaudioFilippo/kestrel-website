@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kestrel-website/static/css/main.9350cfd7.css",
+    "main.js": "/kestrel-website/static/js/main.60e81111.js",
+    "static/js/592.9a88f2fd.chunk.js": "/kestrel-website/static/js/592.9a88f2fd.chunk.js",
+    "static/media/homepage_wallpaper.jpeg": "/kestrel-website/static/media/homepage_wallpaper.e4847cda00f8792f447d.jpeg",
+    "static/media/logo.jpg": "/kestrel-website/static/media/logo.9b99f65ab7d3b07dd029.jpg",
+    "index.html": "/kestrel-website/index.html",
+    "main.9350cfd7.css.map": "/kestrel-website/static/css/main.9350cfd7.css.map",
+    "main.60e81111.js.map": "/kestrel-website/static/js/main.60e81111.js.map",
+    "592.9a88f2fd.chunk.js.map": "/kestrel-website/static/js/592.9a88f2fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9350cfd7.css",
+    "static/js/main.60e81111.js"
+  ]
+}
