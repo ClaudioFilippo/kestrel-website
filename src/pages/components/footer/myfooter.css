@@ -1,6 +1,6 @@
 @media screen and (min-width: 601px) {
   .text-dimension {
-	font-size: 0.9em;
+	font-size: 0.8em;
   }
 	
 }
@@ -20,3 +20,22 @@
 .documents-link {
   color: #fff;
 }
+
+
+.widget-separator {
+  background: #ffffff;
+  position: relative;
+  height: 1px;
+  width: 25%; 
+}
+
+.widget-separator::after {
+  background: inherit;
+  content: "";
+  height: inherit;    
+  position: absolute;
+  top: -4px;
+  width: 50%;
+}
+
+

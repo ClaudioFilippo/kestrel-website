@@ -4,6 +4,7 @@ import {Image, Container, Row, Col, Card } from 'react-bootstrap';
 
 import HomePageWallpaper from "../../images/homepage_wallpaper.jpeg"
 
+import MyContactFooter from '../components/contact-footer/contact-footer'
 import MyFooter from '../components/footer/myfooter';
 
 function FluidExample() {
@@ -65,6 +66,10 @@ function HomePage() {
           <ActivitesCard></ActivitesCard>
 
         </Container>
+
+        <Row className='mt-5'></Row>
+
+        <MyContactFooter></MyContactFooter>
 
         <MyFooter></MyFooter>
 

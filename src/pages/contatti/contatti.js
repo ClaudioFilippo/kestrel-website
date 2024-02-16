@@ -1,10 +1,185 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
+import { Container, Form, Button, Toast, Row, Col, Stack} from "react-bootstrap";
+import emailjs from '@emailjs/browser';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faDownLong} from '@fortawesome/free-solid-svg-icons';
+
+import MyFooter from '../components/footer/myfooter';
+
+import './contatti.css';
 
 
 function Contatti() {
+
+  const form = useRef();
+
+  const [showModal,setShowModal] = useState(false);
+
+  const [formValues, setFormValues] = useState({
+    mittente: "",
+    azienda: "",
+    email: "",
+    messaggio: "",
+    checkbox: false
+  });
+
+  const [records, setRecords] = useState([]);
+
+  const sendEmail = (e) => {
+
+      const serviceId = "service_3ukkxjr";
+      const templateId = "template_ss6myg9";
+      const publicKey = "RI4JxwUcoDQK46rD_"
+
+      e.preventDefault();
+
+      try {
+        emailjs.init(publicKey);
+        emailjs.sendForm(serviceId, templateId, form.current).then(
+          (result) => {
+            console.log('SUCCESS...', result.text);
+            setShowModal(true);
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+        console.log('inviata mail')
+
+        setRecords([...records, formValues]);
+
+        setFormValues({
+          mittente: "",
+          azienda: "",
+          email: "",
+          messaggio: "",
+          checkbox: false
+        });
+
+      } 
+      catch (error) {
+        console.log(error);
+      }
+
+  };
+
+
   return (
-      <p>CONTATTI</p>
+
+    <div>
+
+        <div className='background-contatti text-center'>
+
+            <Row className='mb-5'></Row>
+            
+            <h4 className='mb-5'>Siamo entusiasti di contribuire al tuo prossimo progetto</h4>
+
+            <h6 className='mt-5 mb-5'>Comincia ora a trasformare il tuo modo di lavorare</h6>
+
+            <p className='mt-5 mb-5'>Se desideri esplorare le nostre proposte o vuoi valutare come possiamo ottimizzare il tuo business, non esitare a contattarci. Siamo qui per te.</p>
+            
+            <Row className='mb-5'></Row>
+
+        </div>
+
+      <Container className='mb-5'> 
+
+        <h4 className='mt-5 text-center '>Contattaci al seguente indirizzo email:</h4>
+
+        <h6 className='mt-3 mb-5 text-center '><FontAwesomeIcon icon={faEnvelope} />info@kestrelintelligence.com</h6>
+
+        <h4 className='mt-5 mb-3 text-center '>O riempi il seguente form:</h4>
+
+        <div className='text-center'><FontAwesomeIcon icon={faDownLong} size='2xl' className='mb-3'/></div>
+          
+
+        <Stack gap={2} className="col-md-6 mx-auto stack-style">
+          <Form ref={form} onSubmit={sendEmail}>
+
+            <Form.Group className="mb-3" controlId="formGroupName">
+              <Form.Label>Nome e cognome *</Form.Label>
+              <Form.Control 
+                  required 
+                  name='mittente' 
+                  placeholder="Inserisci nominativo" 
+                  value={formValues.mittente}
+                  onChange={(e) => setFormValues({ ...formValues, mittente: e.target.value }) }
+                />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formGroupCompany">
+              <Form.Label>Azienda *</Form.Label>
+              <Form.Control 
+                  required 
+                  name='azienda' 
+                  placeholder="Inserisci azienda" 
+                  value={formValues.azienda}
+                  onChange={(e) => setFormValues({ ...formValues, azienda: e.target.value }) }
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formGroupMail">
+              <Form.Label>Email *</Form.Label>
+              <Form.Control 
+                  required 
+                  name='email' 
+                  type="email" 
+                  placeholder="Inserisci email"
+                  value={formValues.email}
+                  onChange={(e) => setFormValues({ ...formValues, email: e.target.value }) } 
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formGroupTextAreaRequest">
+              <Form.Label>Richiesta</Form.Label>
+              <Form.Control 
+                  name='messaggio' 
+                  as="textarea"
+                  rows={4} 
+                  value={formValues.messaggio}
+                  onChange={(e) => setFormValues({ ...formValues, messaggio: e.target.value }) }
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Label>Accettazione Privacy *</Form.Label>
+              <Form.Check 
+                required 
+                type="checkbox" 
+                checked={formValues.checkbox}
+                onChange={(e) => setFormValues({ ...formValues, checkbox: e.target.value }) }           
+                label="Acconsento al trattamento dei miei dati personali ai sensi dell'articolo 13 del Regolamento (UE) 2016/679 e alla ricezione di informazioni commerciali. Leggi la normativa." />
+            </Form.Group>
+
+
+            <Button variant="primary" type="submit"> INVIA RICHIESTA </Button>
+
+          </Form>
+
+          </Stack>
+
+          {showModal && (
+            <Stack gap={2} className="col-md-6 mx-auto mt-5 mb-5">
+              <Toast bg='success' onClose={() => setShowModal(false)} className='text-center'>
+                <Toast.Header>
+                  <strong className="me-auto">Messaggio inviato correttamente</strong>
+                </Toast.Header>
+                <Toast.Body className='text-white'>La ricontatteremo quanto prima. Grazie!</Toast.Body>
+              </Toast>
+            </Stack>
+          )
+        
+      }
+
+
+      </Container>
+
+      
+      <MyFooter></MyFooter>
+
+    </div>
 
   );
 }
