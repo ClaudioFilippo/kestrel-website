@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.b61bb0ae.css",
-    "main.js": "/static/js/main.7b66d173.js",
-    "static/js/453.4a3cb7f0.chunk.js": "/static/js/453.4a3cb7f0.chunk.js",
-    "static/media/homepage_wallpaper.jpeg": "/static/media/homepage_wallpaper.e4847cda00f8792f447d.jpeg",
-    "static/media/logo.jpg": "/static/media/logo.9b99f65ab7d3b07dd029.jpg",
-    "index.html": "/index.html",
-    "main.b61bb0ae.css.map": "/static/css/main.b61bb0ae.css.map",
-    "main.7b66d173.js.map": "/static/js/main.7b66d173.js.map",
-    "453.4a3cb7f0.chunk.js.map": "/static/js/453.4a3cb7f0.chunk.js.map"
+    "main.css": "/kestrel-website/static/css/main.b61bb0ae.css",
+    "main.js": "/kestrel-website/static/js/main.0af88145.js",
+    "static/js/453.4a3cb7f0.chunk.js": "/kestrel-website/static/js/453.4a3cb7f0.chunk.js",
+    "static/media/homepage_wallpaper.jpeg": "/kestrel-website/static/media/homepage_wallpaper.e4847cda00f8792f447d.jpeg",
+    "static/media/logo.jpg": "/kestrel-website/static/media/logo.9b99f65ab7d3b07dd029.jpg",
+    "index.html": "/kestrel-website/index.html",
+    "main.b61bb0ae.css.map": "/kestrel-website/static/css/main.b61bb0ae.css.map",
+    "main.0af88145.js.map": "/kestrel-website/static/js/main.0af88145.js.map",
+    "453.4a3cb7f0.chunk.js.map": "/kestrel-website/static/js/453.4a3cb7f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b61bb0ae.css",
-    "static/js/main.7b66d173.js"
+    "static/js/main.0af88145.js"
   ]
 }
