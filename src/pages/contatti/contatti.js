@@ -68,19 +68,23 @@ function Contatti() {
 
   return (
 
-    <div>
+    <div className='new-font'>
 
         <div className='background-contatti text-center'>
 
+          <Container>
+
             <Row className='mb-5'></Row>
             
-            <h4 className='mb-5'>Siamo entusiasti di contribuire al tuo prossimo progetto</h4>
+            <h3 className='mb-5'><strong>Siamo entusiasti di contribuire al tuo prossimo progetto</strong></h3>
 
-            <h6 className='mt-5 mb-5'>Comincia ora a trasformare il tuo modo di lavorare</h6>
+            <h5 className='mt-5 mb-5'>Comincia ora a trasformare il tuo modo di lavorare</h5>
 
-            <p className='mt-5 mb-5'>Se desideri esplorare le nostre proposte o vuoi valutare come possiamo ottimizzare il tuo business, non esitare a contattarci. Siamo qui per te.</p>
+            <h5 className='mt-5 mb-5'>Se desideri esplorare le nostre proposte o vuoi valutare come possiamo ottimizzare il tuo business, non esitare a contattarci. Siamo qui per te.</h5>
             
             <Row className='mb-5'></Row>
+
+          </Container>
 
         </div>
 
@@ -143,7 +147,7 @@ function Contatti() {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" id="formGridCheckbox">
+            <Form.Group className="mb-5" id="formGridCheckbox">
               <Form.Label>Accettazione Privacy *</Form.Label>
               <Form.Check 
                 required 
@@ -153,8 +157,14 @@ function Contatti() {
                 label="Acconsento al trattamento dei miei dati personali ai sensi dell'articolo 13 del Regolamento (UE) 2016/679 e alla ricezione di informazioni commerciali. Leggi la normativa." />
             </Form.Group>
 
+            <div className='text-center'>
+              <Button className="mb-5" variant="primary" type="submit"> INVIA RICHIESTA </Button>
+            </div>
+            <Form.Group className="mb-3">
+              <Form.Label>* Campi obbligatori</Form.Label>
+            </Form.Group>
 
-            <Button variant="primary" type="submit"> INVIA RICHIESTA </Button>
+            
 
           </Form>
 

@@ -1,3 +1,8 @@
 .my-navbar {
-    background: #633a58;
+    /* background: #633a58; */
+    background: #557570;
+}
+
+.size-navlink {
+    font-size: 1.1em;
 }
