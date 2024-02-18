@@ -9,17 +9,20 @@ import Contatti from './pages/contatti/contatti';
 
 function App() {
   return (
-    <BrowserRouter>
-       
-        <MyNavbar></MyNavbar>       
+    <React.StrictMode>
+      <BrowserRouter>
+        
+          <MyNavbar></MyNavbar>       
 
-        <Routes>
-            <Route path="/" exact element={<HomePage/>} />
-            <Route path="/chi-siamo" exact element={<ChiSiamo/>} />
-            <Route path="/contatti" exact element={<Contatti/>} />
-        </Routes>
+          <Routes>
+              <Route path="/" exact element={<HomePage/>} />
+              <Route path="/chi-siamo" exact element={<ChiSiamo/>} />
+              <Route path="/contatti" exact element={<Contatti/>} />
+          </Routes>
 
-    </BrowserRouter>
+      </BrowserRouter>
+    </React.StrictMode>
+
   );
 }
 
