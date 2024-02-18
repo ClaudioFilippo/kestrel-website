@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { Container, Form, Button, Toast, Row, Col, Stack} from "react-bootstrap";
+import { Container, Form, Button, Toast, Row, Stack} from "react-bootstrap";
 import emailjs from '@emailjs/browser';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

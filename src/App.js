@@ -15,6 +15,7 @@ function App() {
           <MyNavbar></MyNavbar>       
 
           <Routes>
+              <Route path="/kestrel-website" exact element={<HomePage/>} />
               <Route path="/" exact element={<HomePage/>} />
               <Route path="/chi-siamo" exact element={<ChiSiamo/>} />
               <Route path="/contatti" exact element={<Contatti/>} />
