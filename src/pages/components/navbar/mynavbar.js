@@ -19,7 +19,7 @@ function MyNavbar() {
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav className="justify-content-end flex-grow-1 pe-5 gap-3 size-navlink" style={{ maxHeight: '100px' }} navbarScroll>
-                    <Nav.Link as={NavLink} to='/chi-siamo'><strong>Chi Siamo</strong></Nav.Link>
+                    <Nav.Link as={NavLink} to='/azienda'><strong>Azienda</strong></Nav.Link>
                     <Nav.Link as={NavLink} to='/contatti'><strong>Contatti</strong></Nav.Link>
                 </Nav>
             </Navbar.Collapse>

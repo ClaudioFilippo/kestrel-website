@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import MyNavbar from './pages/components/navbar/mynavbar';
 
 import HomePage from './pages/home/home';
-import ChiSiamo from './pages/chisiamo/chisiamo';
+import Azienda from './pages/azienda/azienda';
 import Contatti from './pages/contatti/contatti';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Routes>
               <Route path="/kestrel-website" exact element={<HomePage/>} />
               <Route path="/" exact element={<HomePage/>} />
-              <Route path="/chi-siamo" exact element={<ChiSiamo/>} />
+              <Route path="/azienda" exact element={<Azienda/>} />
               <Route path="/contatti" exact element={<Contatti/>} />
           </Routes>
 
