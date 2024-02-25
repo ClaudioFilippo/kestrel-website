@@ -36,10 +36,10 @@ function ActivitesCard() {
         <Col md={{ span: 6, offset: 6 }}>
           <Card className='card-style'>
             <Card.Body>
-              <Card.Title><strong>Analisi dello sport</strong></Card.Title>
+              <Card.Title><strong>Data Insights</strong></Card.Title>
               <Card.Text>
-              Forniamo servizi completi di analisi sportiva che sfruttano la potenza dell'intelligenza artificiale per aiutare le organizzazioni sportive a ottimizzare le prestazioni, 
-              migliorare il coinvolgimento dei fan e favorire la crescita dei ricavi.
+              Forniamo servizi di data insight che aiutano le organizzazioni a sbloccare il pieno potenziale dei loro dati, fornendo approfondimenti praticabili 
+              che favoriscono la crescita, migliorano le prestazioni e ottimizzino i processi aziendali.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -50,10 +50,22 @@ function ActivitesCard() {
         <Col md={6}>
           <Card className='card-style'>
             <Card.Body>
-              <Card.Title><strong>Data Insights</strong></Card.Title>
+              <Card.Title><strong>Analisi del mercato e dei concorrenti</strong></Card.Title>
               <Card.Text>
-              Forniamo servizi di data insight che aiutano le organizzazioni a sbloccare il pieno potenziale dei loro dati, fornendo approfondimenti praticabili 
-              che favoriscono la crescita e migliorano le prestazioni.
+              Forniamo servizi completi di analisi dati che sfruttano la potenza dell'intelligenza artificiale per comprendere il mercato e monitorare le attività dei concorrenti.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      <Row className='mt-3'>
+        <Col md={{ span: 6, offset: 6 }}>
+          <Card className='card-style'>
+            <Card.Body>
+              <Card.Title><strong>Monitoraggio e sicurezza informatica</strong></Card.Title>
+              <Card.Text>
+              Forniamo servizi per realizzare sistemi di monitoraggio che utilizzano l'analisi dei dati per prevedere guasti, ottimizzare la manutenzione degli impianti e per rilevare e prevenire minacce alla sicurezza informatica.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -127,8 +139,8 @@ function HomePage() {
             <Container>
               <Row className='align-items-center'>
                 <Col className='mt-4 mb-5 text-center' md={6}>
-                  <h1><strong> Potenziate la vostra attività sportiva</strong></h1>
-                  <p className=" spacer-header"> Kestrel Intelligence è una startup che fornisce servizi di consulenza AI e analisi dei dati. Siamo specializzati nel settore dello sport, offrendo soluzioni all'avanguardia che trasformano la vostra attività. Lavoriamo instancabilmente per fornirvi soluzioni personalizzate che si adattino alle vostre esigenze specifiche. In Kestrel non siamo solo un fornitore di servizi, ma il vostro partner di successo.</p>
+                  <h1><strong> Potenziate la vostra attività</strong></h1>
+                  <p className=" spacer-header"> Kestrel Intelligence è una startup che fornisce servizi di consulenza AI e analisi dei dati, offrendo soluzioni all'avanguardia che trasformano la vostra attività. Lavoriamo instancabilmente per fornirvi soluzioni personalizzate che si adattino alle vostre esigenze specifiche. In Kestrel non siamo solo un fornitore di servizi, ma il vostro partner di successo.</p>
                   <Button as={NavLink} to='/contatti' variant="light" size="lg"><strong>Contattaci</strong></Button>
                 </Col>
                 <Col md={6}>
