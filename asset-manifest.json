@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/kestrel-website/static/css/main.4e583962.css",
-    "main.js": "/kestrel-website/static/js/main.64934ecc.js",
+    "main.js": "/kestrel-website/static/js/main.bc1ed120.js",
     "static/js/453.4a3cb7f0.chunk.js": "/kestrel-website/static/js/453.4a3cb7f0.chunk.js",
     "static/media/funzionamento-profiter-step-2048x1701.png": "/kestrel-website/static/media/funzionamento-profiter-step-2048x1701.f88dd4b53b764f2ad230.png",
     "static/media/wallpaper-1.jpg": "/kestrel-website/static/media/wallpaper-1.0fe487f477cc4a62bfc5.jpg",
+    "static/media/albrile.jpg": "/kestrel-website/static/media/albrile.a251f6480081711dbb8c.jpg",
     "static/media/logo.jpg": "/kestrel-website/static/media/logo.9b99f65ab7d3b07dd029.jpg",
     "static/media/vitiello.jpg": "/kestrel-website/static/media/vitiello.dcad882d5ca67f55f11a.jpg",
     "static/media/manuello.jpg": "/kestrel-website/static/media/manuello.e4e5cbd226af628a427b.jpg",
     "index.html": "/kestrel-website/index.html",
     "main.4e583962.css.map": "/kestrel-website/static/css/main.4e583962.css.map",
-    "main.64934ecc.js.map": "/kestrel-website/static/js/main.64934ecc.js.map",
+    "main.bc1ed120.js.map": "/kestrel-website/static/js/main.bc1ed120.js.map",
     "453.4a3cb7f0.chunk.js.map": "/kestrel-website/static/js/453.4a3cb7f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e583962.css",
-    "static/js/main.64934ecc.js"
+    "static/js/main.bc1ed120.js"
   ]
 }
