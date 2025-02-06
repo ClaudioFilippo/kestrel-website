@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom"
 
 import {Image, Container, Row, Col, Card, Button, Accordion } from 'react-bootstrap';
 
-import HomePageWallpaper from "../../images/wallpaper-1.jpg"
-import ImmagineCicloLavoro from "../../images/funzionamento-profiter-step-2048x1701.png"
+import HomePageWallpaper from "../../images/homepage.jpg"
+import ImmagineCicloLavoro from "../../images/kestrel-funzionamento.png"
 
 import './home.css'
 
@@ -59,7 +59,7 @@ function ActivitesCard() {
         </Col>
       </Row>
 
-      <Row className='mt-3'>
+      {/* <Row className='mt-3'>
         <Col md={{ span: 6, offset: 6 }}>
           <Card className='card-style'>
             <Card.Body>
@@ -70,7 +70,7 @@ function ActivitesCard() {
             </Card.Body>
           </Card>
         </Col>
-      </Row>
+      </Row> */}
 
     </div>
 
@@ -84,7 +84,7 @@ function ComeLavoriamo() {
 
     <div>
       <Row className='align-items-center'>
-        <Col md={6}>
+        <Col md={7}>
           <Accordion>
             <Accordion.Item eventKey="0" className='mt-3'>
               <Accordion.Header>1. Studio ed analisi dei big data</Accordion.Header>
@@ -116,7 +116,7 @@ function ComeLavoriamo() {
           </Accordion>
         </Col>
 
-        <Col md={6}>
+        <Col md={{ span: 3, offset: 1 }}>
           <Image src={ImmagineCicloLavoro} fluid></Image>
         </Col>
       </Row>
@@ -140,7 +140,7 @@ function HomePage() {
               <Row className='align-items-center'>
                 <Col className='mt-4 mb-5 text-center' md={6}>
                   <h1><strong> Potenziate la vostra attività</strong></h1>
-                  <p className=" spacer-header"> Kestrel Intelligence è una startup che fornisce servizi di consulenza AI e analisi dei dati, offrendo soluzioni all'avanguardia che trasformano la vostra attività. Lavoriamo instancabilmente per fornirvi soluzioni personalizzate che si adattino alle vostre esigenze specifiche. In Kestrel non siamo solo un fornitore di servizi, ma il vostro partner di successo.</p>
+                  <p className=" spacer-header"> Kestrel Intelligence è una realtà innovativa che offre consulenza specializzata in AI e analisi dei dati, proponendo soluzioni avanzate per ottimizzare e trasformare il vostro business. Ci impegniamo costantemente a fornire soluzioni su misura, perfettamente in linea con le vostre esigenze specifiche. In Kestrel non siamo solo un consulente, ma il partner strategico per il successo della vostra azienda.</p>
                   <Button as={NavLink} to='/contatti' variant="light" size="lg"><strong>Contattaci</strong></Button>
                 </Col>
                 <Col md={6}>

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import logo from "../../../images/logo.jpg";
+import logo from "../../../images/logo.jpeg";
 
 import './myfooter.css';
 
@@ -18,7 +18,7 @@ function MyFooter() {
 
                 <Row>
                     <Col className='mt-5'>
-                        <h4><img src={logo} width="40rem" alt=""></img>estrel Intelligence Srl</h4>
+                        <h4><img src={logo} width="40rem" alt=""></img> Kestrel Intelligence</h4>
                         <div className='mt-3 widget-separator'></div>
                     </Col>
                 </Row>
@@ -51,7 +51,7 @@ function MyFooter() {
                 
                 <Row>
                     <Col className='text-center'>
-                        <p>Copyright - Kestrel Intelligence S.r.l - P.IVA: 0123456789</p>
+                        <p>Copyright - P.IVA: 0123456789</p>
                     </Col> 
                 </Row>
 

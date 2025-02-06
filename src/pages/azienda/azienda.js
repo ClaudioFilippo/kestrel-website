@@ -2,10 +2,12 @@ import React from 'react';
 
 import { Container, Card, Row, Col} from "react-bootstrap";
 
-import ManuelloImg from "../../images/manuello.jpg"
-import VitielloImg from "../../images/vitiello.jpg"
+// import ManuelloImg from "../../images/manuello.jpg"
+// import VitielloImg from "../../images/vitiello.jpg"
 
 import './azienda.css'
+
+import MyFooter from '../components/footer/myfooter';
 
 
 function AziendaWallpaper() {
@@ -94,47 +96,47 @@ function CardRagioni() {
 }
 
 
-function PeopleCard() {
-  return (
-    <div>
-      <Container>
+// function PeopleCard() {
+//   return (
+//     <div>
+//       <Container>
 
-        <Row className='justify-content-md-center align-items-center'>
+//         <Row className='justify-content-md-center align-items-center mt-3 mb-5'>
 
-          <Col md='auto' className='text-center'>
+//           <Col md='auto' className='text-center'>
 
-            <Card style={{ width: '25rem' }}>
-              <Card.Img variant="top" src={ManuelloImg} />
-              <Card.Body>
-                <Card.Title><strong>Valter Manuello</strong></Card.Title>
-                <Card.Text>
-                  Co-founder
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+//             <Card style={{ width: '25rem' }}>
+//               <Card.Img variant="top" src={ManuelloImg} />
+//               <Card.Body>
+//                 <Card.Title><strong>Valter Manuello</strong></Card.Title>
+//                 <Card.Text>
+//                   Co-founder
+//                 </Card.Text>
+//               </Card.Body>
+//             </Card>
+//           </Col>
           
-          <Col md='auto' className='text-center'>
-            <Card style={{ width: '25rem' }}>
-              <Card.Img variant="top" src={VitielloImg} />
-              <Card.Body>
-                <Card.Title><strong>Vitiello Claudio Filippo</strong></Card.Title>
-                <Card.Text>
-                  Co-founder
-                </Card.Text>
-              </Card.Body>
-            </Card>
+//           <Col md='auto' className='text-center'>
+//             <Card style={{ width: '25rem' }}>
+//               <Card.Img variant="top" src={VitielloImg} />
+//               <Card.Body>
+//                 <Card.Title><strong>Vitiello Claudio Filippo</strong></Card.Title>
+//                 <Card.Text>
+//                   Co-founder
+//                 </Card.Text>
+//               </Card.Body>
+//             </Card>
 
-          </Col>
+//           </Col>
 
-        </Row>
+//         </Row>
 
-      </Container>
+//       </Container>
 
 
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
 
 
@@ -148,7 +150,7 @@ function Azienda() {
 
         <Container>
 
-        <Row className='mt-5 mb-5'>
+         <Row className='mt-5 mb-5'>
             <Col className='text-center'>
                 <h2><strong>Perché scegliere noi?</strong></h2>
             </Col>
@@ -156,15 +158,19 @@ function Azienda() {
 
           <CardRagioni></CardRagioni>
 
-          <Row className='mt-5 mb-5'>
+          <Row className='mt-5 mb-5'></Row>
+
+          {/* <Row className='mt-5 mb-5'>
             <Col className='text-center'>
                 <h3>I vertici dell'azienda:</h3>
             </Col>
-          </Row>
+          </Row> */}
 
         </Container>
 
-        <PeopleCard></PeopleCard>
+        {/* <PeopleCard></PeopleCard> */}
+
+        <MyFooter></MyFooter>
 
       </div>
 

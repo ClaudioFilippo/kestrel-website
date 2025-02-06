@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { Container, Form, Button, Toast, Row, Stack} from "react-bootstrap";
+import { Container, Form, Button, Toast, Row, Stack, Modal} from "react-bootstrap";
 import emailjs from '@emailjs/browser';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,6 +16,7 @@ function Contatti() {
   const form = useRef();
 
   const [showModal,setShowModal] = useState(false);
+  const handleClose = () => setShowModal(false);
 
   const [formValues, setFormValues] = useState({
     mittente: "",
@@ -170,18 +171,18 @@ function Contatti() {
 
           </Stack>
 
-          {showModal && (
-            <Stack gap={2} className="col-md-6 mx-auto mt-5 mb-5">
-              <Toast bg='success' onClose={() => setShowModal(false)} className='text-center'>
-                <Toast.Header>
-                  <strong className="me-auto">Messaggio inviato correttamente</strong>
-                </Toast.Header>
-                <Toast.Body className='text-white'>La ricontatteremo quanto prima. Grazie!</Toast.Body>
-              </Toast>
-            </Stack>
-          )
-        
-      }
+
+          <Modal show={showModal} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Messaggio inviato correttamente</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>La ricontatteremo quanto prima. Grazie!</Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Chiudi
+                    </Button>
+                  </Modal.Footer>
+          </Modal>
 
 
       </Container>
