@@ -83,7 +83,7 @@ function ComeLavoriamo() {
   return (
 
     <div>
-      <Row className='align-items-center'>
+      <Row className='align-items-center justify-content-md-center'>
         <Col md={7}>
           <Accordion>
             <Accordion.Item eventKey="0" className='mt-3'>
@@ -116,7 +116,7 @@ function ComeLavoriamo() {
           </Accordion>
         </Col>
 
-        <Col md={{ span: 3, offset: 1 }}>
+        <Col xs={{ span: 12, offset: 3}} sm={{ span: 12, offset: 3}} md={{ span: 3, offset: 1 }} className='mt-5'>
           <Image src={ImmagineCicloLavoro} fluid></Image>
         </Col>
       </Row>
