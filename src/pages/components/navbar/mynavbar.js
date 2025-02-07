@@ -14,7 +14,7 @@ function MyNavbar() {
             <Container>
             <Navbar.Brand as={NavLink} to='/' className="d-flex align-items-center">
                 <img src={logo} width="50rem" alt=""></img>
-                <h4 className="display-6 ms-2"> KESTREL INTELLIGENCE</h4>
+                <h3 className="ms-2"> KESTREL INTELLIGENCE</h3>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">

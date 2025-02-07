@@ -59,19 +59,6 @@ function ActivitesCard() {
         </Col>
       </Row>
 
-      {/* <Row className='mt-3'>
-        <Col md={{ span: 6, offset: 6 }}>
-          <Card className='card-style'>
-            <Card.Body>
-              <Card.Title><strong>Monitoraggio e sicurezza informatica</strong></Card.Title>
-              <Card.Text>
-              Forniamo servizi per realizzare sistemi di monitoraggio che utilizzano l'analisi dei dati per prevedere guasti, ottimizzare la manutenzione degli impianti e per rilevare e prevenire minacce alla sicurezza informatica.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row> */}
-
     </div>
 
   );
@@ -116,7 +103,7 @@ function ComeLavoriamo() {
           </Accordion>
         </Col>
 
-        <Col xs={{ span: 12, offset: 3}} sm={{ span: 12, offset: 3}} md={{ span: 3, offset: 1 }} className='mt-5'>
+        <Col xs={{ span: 8, offset: 2}} sm={{ span: 8, offset: 2}} md={{ span: 3, offset: 1 }} className='mt-5'>
           <Image src={ImmagineCicloLavoro} fluid></Image>
         </Col>
       </Row>
