@@ -128,7 +128,12 @@ function HomePage() {
                 <Col className='mt-4 mb-5 text-center' md={6}>
                   <h1><strong> Potenziate la vostra attività</strong></h1>
                   <p className=" spacer-header"> Kestrel Intelligence è una realtà innovativa che offre consulenza specializzata in AI e analisi dei dati, proponendo soluzioni avanzate per ottimizzare e trasformare il vostro business. Ci impegniamo costantemente a fornire soluzioni su misura, perfettamente in linea con le vostre esigenze specifiche. In Kestrel non siamo solo un consulente, ma il partner strategico per il successo della vostra azienda.</p>
-                  <Button as={NavLink} to='/contatti' variant="light" size="lg"><strong>Contattaci</strong></Button>
+                                    
+                  <Button as={NavLink} to='/contatti' size="lg" variant="light" className="shimmer-button position-relative overflow-hidden">
+                    <span className="shimmer-effect"></span>
+                    <span className="button-text"><strong>Contattaci</strong></span>
+                  </Button>
+
                 </Col>
                 <Col md={6}>
                   <Image className='spacer-header' src={HomePageWallpaper} fluid roundedCircle /> 

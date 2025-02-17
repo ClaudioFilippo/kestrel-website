@@ -19,7 +19,10 @@ function MyContactFooter() {
                 <Row>
                     <Col className='text-center'>
                         <h4 className='mb-3'>Hai un progetto da realizzare?</h4>
-                        <Button as={NavLink} to='/contatti' variant="light" size="lg">Contattaci</Button>
+                        <Button as={NavLink} to='/contatti' size="lg" variant="light" className="shimmer-button position-relative overflow-hidden">
+                            <span className="shimmer-effect"></span>
+                            <span className="button-text"><strong>Contattaci</strong></span>
+                        </Button>
                     </Col>
 
                 </Row>
