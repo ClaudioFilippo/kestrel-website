@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/kestrel-website/static/css/main.bc2b46ef.css",
-    "main.js": "/kestrel-website/static/js/main.40f9bf7c.js",
+    "main.js": "/kestrel-website/static/js/main.43282392.js",
     "static/js/453.4a3cb7f0.chunk.js": "/kestrel-website/static/js/453.4a3cb7f0.chunk.js",
     "static/media/kestrel-funzionamento.png": "/kestrel-website/static/media/kestrel-funzionamento.b04b2c7832408a98b4fb.png",
     "static/media/homepage.jpg": "/kestrel-website/static/media/homepage.0fe487f477cc4a62bfc5.jpg",
     "static/media/logo.jpeg": "/kestrel-website/static/media/logo.9132881631edc972154d.jpeg",
     "index.html": "/kestrel-website/index.html",
     "main.bc2b46ef.css.map": "/kestrel-website/static/css/main.bc2b46ef.css.map",
-    "main.40f9bf7c.js.map": "/kestrel-website/static/js/main.40f9bf7c.js.map",
+    "main.43282392.js.map": "/kestrel-website/static/js/main.43282392.js.map",
     "453.4a3cb7f0.chunk.js.map": "/kestrel-website/static/js/453.4a3cb7f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc2b46ef.css",
-    "static/js/main.40f9bf7c.js"
+    "static/js/main.43282392.js"
   ]
 }
