@@ -30,7 +30,7 @@ function Contatti() {
 
   const sendEmail = (e) => {
 
-      const serviceId = "service_3ukkxjr";
+      const serviceId = "service_3ddz1jw";
       const templateId = "template_ss6myg9";
       const publicKey = "RI4JxwUcoDQK46rD_"
 
