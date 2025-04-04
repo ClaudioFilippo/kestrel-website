@@ -93,7 +93,7 @@ function Contatti() {
 
         <h4 className='mt-5 text-center '>Contattaci al seguente indirizzo email:</h4>
 
-        <h6 className='mt-3 mb-5 text-center '><FontAwesomeIcon icon={faEnvelope} />info@kestrelintelligence.com</h6>
+        <h6 className='mt-3 mb-5 text-center '><FontAwesomeIcon icon={faEnvelope} /> contatti@kestrelintelligence.it</h6>
 
         <h4 className='mt-5 mb-3 text-center '>O riempi il seguente form:</h4>
 

@@ -29,7 +29,7 @@ function MyFooter() {
                         <h4>Contattaci</h4>
                         <div className='mt-2 mb-2 widget-separator'/>
                         <h6>Email</h6>
-                        <p><FontAwesomeIcon icon={faEnvelope} /> info@kestrelintelligence.com </p>
+                        <p><FontAwesomeIcon icon={faEnvelope} /> contatti@kestrelintelligence.it </p>
                     </Col>
                     <Col md={4} className='mt-3 mb-4'>
                         <h4>Seguici sui Social</h4>
@@ -39,10 +39,8 @@ function MyFooter() {
                     <Col md={4} className='mt-3 mb-4'>
                         <h4>Azienda</h4>
                         <div className='mt-2 mb-2 widget-separator'/>
-                        <h6>Sede Operativa</h6>
-                        <p><FontAwesomeIcon icon={faLocationDot} /> Via Paperino, 8, Cuneo, 12100, Italy</p>
                         <h6>Sede Legale</h6>
-                        <p><FontAwesomeIcon icon={faLocationDot} /> Piazza Pippo, 6, Cuneo, 12100, Italy</p>
+                        <p><FontAwesomeIcon icon={faLocationDot} /> Corso Giovanni Giolitti, 17 - Cuneo (CN), 12100, Italia</p>
                     </Col>
                 </Row>
 
@@ -51,7 +49,7 @@ function MyFooter() {
                 
                 <Row>
                     <Col className='text-center'>
-                        <p>Copyright - P.IVA: 0123456789</p>
+                        <p>Copyright - Kestrel Intelligence di Vitiello Claudio Filippo - P.IVA: 04154210043</p>
                     </Col> 
                 </Row>
 
