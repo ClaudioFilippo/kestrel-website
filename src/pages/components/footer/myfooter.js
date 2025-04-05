@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom"
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -55,7 +56,10 @@ function MyFooter() {
 
                 <Row>
                     <Col className='text-center'>
-                        <p><a href="/" className='documents-link'>PRIVACY POLICY</a> - <a href="/" className='documents-link'>COOKIE POLICY</a></p>
+                        <p>
+                            <NavLink to='/privacy-policy' className='documents-link'>PRIVACY POLICY</NavLink> -    
+                            <NavLink to="/cookie-policy" className='documents-link'>COOKIE POLICY</NavLink>
+                        </p>   
                     </Col> 
                 </Row>
                 

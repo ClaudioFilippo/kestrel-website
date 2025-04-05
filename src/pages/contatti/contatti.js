@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
-import { Container, Form, Button, Toast, Row, Stack, Modal} from "react-bootstrap";
+import { Container, Form, Button, Spinner, Row, Stack, Modal} from "react-bootstrap";
 import emailjs from '@emailjs/browser';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,6 +18,18 @@ function Contatti() {
   const [showModal,setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
 
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Add verification antispam
+  const [verificationCode, setVerificationCode] = useState("");
+  const [userCodeInput, setUserCodeInput]       = useState("");
+
+  useEffect(() => {
+    const code = Math.floor(1000 + Math.random() * 9000).toString(); // 4-digit code
+    setVerificationCode(code);
+  }, []);
+
+  // Form start value
   const [formValues, setFormValues] = useState({
     mittente: "",
     azienda: "",
@@ -30,21 +42,35 @@ function Contatti() {
 
   const sendEmail = (e) => {
 
+      setIsLoading(true); // start loading
+
       const serviceId = "service_3ddz1jw";
       const templateId = "template_ss6myg9";
       const publicKey = "RI4JxwUcoDQK46rD_"
 
       e.preventDefault();
 
+      if (userCodeInput !== verificationCode) {
+        alert("Codice di verifica errato. Riprova.");
+        setVerificationCode(Math.floor(1000 + Math.random() * 9000).toString());
+        return;
+      }
+
       try {
+
+        setVerificationCode(null);
+
         emailjs.init(publicKey);
         emailjs.sendForm(serviceId, templateId, form.current).then(
           (result) => {
             console.log('SUCCESS...', result.text);
             setShowModal(true);
+            setIsLoading(false); // stop loading when modal opens
           },
           (error) => {
             console.log('FAILED...', error.text);
+            alert("Errore nell'invio del form. Vi preghiamo di riprovare o usare altri mezzi, ci scusiamo per il disagio.");
+            setIsLoading(false); // just in case
           },
         );
         console.log('inviata mail')
@@ -59,9 +85,14 @@ function Contatti() {
           checkbox: false
         });
 
+        // Clear the user input and generate a new code
+        setUserCodeInput("");
+        setVerificationCode(Math.floor(1000 + Math.random() * 9000).toString());
+
       } 
       catch (error) {
         console.log(error);
+        setIsLoading(false); // just in case
       }
 
   };
@@ -137,7 +168,7 @@ function Contatti() {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formGroupTextAreaRequest">
+            <Form.Group className="mb-5" controlId="formGroupTextAreaRequest">
               <Form.Label>Richiesta</Form.Label>
               <Form.Control 
                   name='messaggio' 
@@ -146,6 +177,22 @@ function Contatti() {
                   value={formValues.messaggio}
                   onChange={(e) => setFormValues({ ...formValues, messaggio: e.target.value }) }
               />
+            </Form.Group>
+
+            <Form.Group className="mb-5" controlId="formGroupCode">
+              <Form.Label>Codice di verifica *</Form.Label>
+              <div className="d-flex align-items-center">
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Inserisci il codice"
+                  value={userCodeInput}
+                  onChange={(e) => setUserCodeInput(e.target.value)}
+                  className='me-3'
+                  style={{ maxWidth: '220px' }}
+                />
+                <span className="fw-bold fs-5">{verificationCode}</span>
+              </div>
             </Form.Group>
 
             <Form.Group className="mb-5" id="formGridCheckbox">
@@ -159,13 +206,29 @@ function Contatti() {
             </Form.Group>
 
             <div className='text-center'>
-              <Button className="mb-5" variant="primary" type="submit"> INVIA RICHIESTA </Button>
+              <Button className="mb-5" variant="primary" type="submit" disabled={isLoading}>
+                {isLoading ? (
+                  <>
+                    <Spinner
+                      as="span"
+                      animation="border"
+                      size="sm"
+                      role="status"
+                      aria-hidden="true"
+                      className="me-2"
+                    />
+                    Invio in corso...
+                  </>
+                ) : (
+                  "INVIA RICHIESTA"
+                )}
+              </Button>
             </div>
+
+
             <Form.Group className="mb-3">
               <Form.Label>* Campi obbligatori</Form.Label>
             </Form.Group>
-
-            
 
           </Form>
 
