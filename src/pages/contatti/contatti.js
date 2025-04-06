@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
-
+import { Helmet } from "react-helmet";
 import { Container, Form, Button, Spinner, Row, Stack, Modal} from "react-bootstrap";
+
 import emailjs from '@emailjs/browser';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -102,6 +103,14 @@ function Contatti() {
 
     <div className='new-font'>
 
+        <Helmet>
+          <title>Connessione diretta alla consulenza AI e analisi dei dati a domicilio</title>
+          <meta
+            name="description"
+            content="Ottieni consulenza ai con soluzioni su misura e analisi dei dati per ottimizzare la tua strategia aziendale con Kestrel Intelligence. Contattaci!"
+          />
+        </Helmet>
+
         <div className='background-contatti text-center'>
 
           <Container>
@@ -112,7 +121,10 @@ function Contatti() {
 
             <h5 className='mt-5 mb-5'>Comincia ora a trasformare il tuo modo di lavorare</h5>
 
-            <h5 className='mt-5 mb-5'>Se desideri esplorare le nostre proposte o vuoi valutare come possiamo ottimizzare il tuo business, non esitare a contattarci. Siamo qui per te.</h5>
+            <h5 className='mt-5 mb-5'>
+              Se desideri esplorare le nostre proposte o vuoi valutare come possiamo ottimizzare il tuo business con le nostre analisi dei dati di precisione e consulenza AI, non esitare a contattarci. 
+              Siamo qui per te.
+            </h5>
             
             <Row className='mb-5'></Row>
 

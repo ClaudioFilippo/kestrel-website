@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from "react-helmet";
 import { Container, Card, Row, Col} from "react-bootstrap";
 
 import './azienda.css'
@@ -15,7 +15,7 @@ function AziendaWallpaper() {
             <Col md='auto' className='text-center mt-5 mb-5'>
               <h1><strong>Benvenuti in KESTREL INTELLIGENCE</strong></h1>
               <h3 className='mt-4'>Guidando l'Innovazione attraverso i Dati e l'Intelligenza Artificiale</h3>
-              <p className='mt-4 mb-4'>Siamo entusiasti di darvi il benvenuto nel mondo di Kestrel Intelligence, una nuova e dinamica realtà dedicata a guidare l'innovazione attraverso l'analisi dei dati e l'intelligenza artificiale.
+              <p className='mt-4 mb-4'>Siamo entusiasti di darvi il benvenuto nel mondo di Kestrel Intelligence, una realtà che guida l'innovazione attraverso l'analisi dei dati e l'intelligenza artificiale.
                  Presso Kestrel Intelligence, ci impegniamo a offrire soluzioni all'avanguardia che trasformano i dati in insight preziosi, permettendo alle aziende di prendere decisioni informate e di anticipare le sfide del futuro.
               </p>
             </Col>
@@ -97,6 +97,14 @@ function Azienda() {
   return (
     
       <div className='new-font'>
+
+        <Helmet>
+          <title>Consulenza AI e analisi dei dati per il tuo successo aziendale</title>
+          <meta
+            name="description"
+            content="Benvenuti in Kestrel Intelligence, esperti in consulenza ai e analisi dei dati per ottimizzazione aziendale e soluzioni personalizzate in Piemonte e oltre."
+          />
+        </Helmet>
 
         <AziendaWallpaper></AziendaWallpaper>
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
+import ScrollToTop  from './pages/components/scroll-top-page/scroll-top-page';
+
 import MyNavbar from './pages/components/navbar/mynavbar';
 import HomePage from './pages/home/home';
 import Azienda from './pages/azienda/azienda';
@@ -12,10 +14,13 @@ import PrivacyPolicy from "./documents/privacy-policy"
 import CookieBanner from './pages/components/cookie-banner/cookie-banner';
 import './pages/components/cookie-banner/cookie-banner.css';
 
+
 function App() {
   return (
     <React.StrictMode>
       <BrowserRouter>
+
+        <ScrollToTop />
 
         <CookieBanner />
 

@@ -57,7 +57,8 @@ function MyFooter() {
                 <Row>
                     <Col className='text-center'>
                         <p>
-                            <NavLink to='/privacy-policy' className='documents-link'>PRIVACY POLICY</NavLink> -    
+                            <NavLink to='/privacy-policy' className='documents-link'>PRIVACY POLICY</NavLink> 
+                            <a> - </a>    
                             <NavLink to="/cookie-policy" className='documents-link'>COOKIE POLICY</NavLink>
                         </p>   
                     </Col> 

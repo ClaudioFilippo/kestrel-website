@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom"
-
+import { Helmet } from "react-helmet";
 import {Image, Container, Row, Col, Card, Button, Accordion } from 'react-bootstrap';
 
 import HomePageWallpaper from "../../images/homepage.jpg"
@@ -143,25 +143,35 @@ function HomePage() {
 
       <div className='new-font'>
 
-          <div className='background-home'>
-            <Container>
-              <Row className='align-items-center'>
-                <Col className='mt-4 mb-5 text-center' md={6}>
-                  <h1><strong> Potenziate la vostra attività</strong></h1>
-                  <p className=" spacer-header"> Kestrel Intelligence è una realtà innovativa che offre consulenza specializzata in AI e analisi dei dati, proponendo soluzioni avanzate per ottimizzare e trasformare il vostro business. Ci impegniamo costantemente a fornire soluzioni su misura, perfettamente in linea con le vostre esigenze specifiche. In Kestrel non siamo solo un consulente, ma il partner strategico per il successo della vostra azienda.</p>
-                                    
-                  <Button as={NavLink} to='/contatti' size="lg" variant="light" className="shimmer-button position-relative overflow-hidden">
-                    <span className="shimmer-effect"></span>
-                    <span className="button-text"><strong>Contattaci</strong></span>
-                  </Button>
+        <Helmet>
+          <title>Incrementa il tuo successo aziendale tramite soluzioni AI e analisi dei dati</title>
+          <meta
+            name="description"
+            content="Kestrel Intelligence offre soluzioni avanzate di intelligenza artificiale e analisi dei dati per ottimizzare il tuo business. Scopri i nostri servizi su misura."
+          />
+        </Helmet>
 
-                </Col>
-                <Col md={6}>
-                  <Image className='spacer-header' src={HomePageWallpaper} fluid roundedCircle /> 
-                </Col>
-              </Row>
-            </Container>
-          </div>
+        <div className='background-home'>
+          <Container>
+            <Row className='align-items-center'>
+              <Col className='mt-4 mb-5 text-center' md={6}>
+                <h1><strong> Potenziate la vostra attività</strong></h1>
+                <p className=" spacer-header"> Kestrel Intelligence è una realtà innovativa che offre consulenza specializzata in AI e analisi dei dati, proponendo soluzioni avanzate per ottimizzare e trasformare il vostro business. 
+                                                Ci impegniamo costantemente a fornire soluzioni su misura, perfettamente in linea con le vostre esigenze specifiche. 
+                                                In Kestrel non siamo solo un consulente, ma il partner strategico per il successo della vostra azienda.</p>
+                                  
+                <Button as={NavLink} to='/contatti' size="lg" variant="light" className="shimmer-button position-relative overflow-hidden">
+                  <span className="shimmer-effect"></span>
+                  <span className="button-text"><strong>Contattaci</strong></span>
+                </Button>
+
+              </Col>
+              <Col md={6}>
+                <Image className='spacer-header' src={HomePageWallpaper} fluid roundedCircle /> 
+              </Col>
+            </Row>
+          </Container>
+        </div>
 
         <Container>
 
