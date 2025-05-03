@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 
 import { Navbar, Nav, Container } from "react-bootstrap";
 
-import logo from "../../../images/logo.jpeg"
+import logo from "../../../images/logo.png"
 
 import './mynavbar.css'
 
@@ -14,7 +14,7 @@ function MyNavbar() {
             <Container>
             <Navbar.Brand as={NavLink} to='/' className="d-flex align-items-center">
                 <img src={logo} width="50rem" alt=""></img>
-                <h3 className="ms-2"> KESTREL INTELLIGENCE</h3>
+                <h2 className="mt-2 ms-2"> KESTREL INTELLIGENCE</h2>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">

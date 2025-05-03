@@ -104,7 +104,7 @@ function Contatti() {
     <div className='new-font'>
 
         <Helmet>
-          <title>Connessione diretta alla consulenza AI e analisi dei dati a domicilio</title>
+          <title>Contatti</title>
           <meta
             name="description"
             content="Ottieni consulenza ai con soluzioni su misura e analisi dei dati per ottimizzare la tua strategia aziendale con Kestrel Intelligence. Contattaci!"

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import logo from "../../../images/logo.jpeg";
+import logo from "../../../images/logo.png";
 
 import './myfooter.css';
 
@@ -35,7 +35,7 @@ function MyFooter() {
                     <Col md={4} className='mt-3 mb-4'>
                         <h4>Seguici sui Social</h4>
                         <div className='mt-2 mb-2 widget-separator'/>
-                        <a href="/"><FontAwesomeIcon icon={faLinkedin} size="3x" className='documents-link'/></a>
+                        <a href="https://www.linkedin.com/company/kestrel-intelligence-it" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="3x" className='documents-link'/></a>
                     </Col>
                     <Col md={4} className='mt-3 mb-4'>
                         <h4>Azienda</h4>

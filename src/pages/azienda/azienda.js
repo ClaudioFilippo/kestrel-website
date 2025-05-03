@@ -99,7 +99,7 @@ function Azienda() {
       <div className='new-font'>
 
         <Helmet>
-          <title>Consulenza AI e analisi dei dati per il tuo successo aziendale</title>
+          <title>Azienda</title>
           <meta
             name="description"
             content="Benvenuti in Kestrel Intelligence, esperti in consulenza ai e analisi dei dati per ottimizzazione aziendale e soluzioni personalizzate in Piemonte e oltre."

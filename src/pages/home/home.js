@@ -144,7 +144,7 @@ function HomePage() {
       <div className='new-font'>
 
         <Helmet>
-          <title>Incrementa il tuo successo aziendale tramite soluzioni AI e analisi dei dati</title>
+          <title>Home Page</title>
           <meta
             name="description"
             content="Kestrel Intelligence offre soluzioni avanzate di intelligenza artificiale e analisi dei dati per ottimizzare il tuo business. Scopri i nostri servizi su misura."
