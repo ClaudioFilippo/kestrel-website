@@ -5,8 +5,8 @@ import ScrollToTop  from './pages/components/scroll-top-page/scroll-top-page';
 
 import MyNavbar from './pages/components/navbar/mynavbar';
 import HomePage from './pages/home/HomePage';
-import Azienda from './pages/azienda/Azienda';
-import Contatti from './pages/contatti/Contatti';
+import Azienda from './pages/azienda/AziendaPage';
+import Contatti from './pages/contatti/ContattiPage';
 
 import CookiePolicy from "./documents/cookie-policy"
 import PrivacyPolicy from "./documents/privacy-policy"
