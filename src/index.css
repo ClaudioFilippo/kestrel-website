@@ -2,8 +2,134 @@
     font-family: 'Courier New', monospace;
   }
 
+  
+.background-section {
+  background: linear-gradient(180deg, #8daaa6 0%, #7a9a95 100%);
+  color: #f8f9fa;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.background-section h1 {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.background-section h3 {
+  color: #f1f5f4;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.background-section p {
+  color: #f9f9f9;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.highlighted-white {
+  color: #ffffff;
+}
+
+.highlighted-light {
+  color: #f1f5f4;
+}
+
+
+/* SPAZIO PERSONALIZZATO */
+.spacer-header {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+
+/* CARD STILE PER TUTTO IL PROGETTO */
+.card-style {
+  background: var(--color-light);
+  border: 1px solid rgba(85, 117, 112, 0.2);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-style:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(85, 117, 112, 0.15);
+}
+
+.card-style .card-title {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.card-style .card-text {
+  color: var(--color-dark);
+  opacity: 0.9;
+  line-height: 1.6;
+}
 
 .new-font-navbar {
     font-family: 'Courier New', monospace;
   }
+
+
+/* COLORE ICONE DA FONT AWESOME */
+.icon-analytics {
+  color: #8daaa6; /* blu acqua, ad esempio */
+}
+
+
+/* PULSANTE SHIMMER */
+.shimmer-button {
+    color: black !important;
+    background-color: #c8c7c7 !important;
+    overflow: hidden;
+    transition: background 0.3s ease-in-out;
+    border: None !important
+  }
+  
+  .shimmer-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 1.5s infinite linear;
+  }
+
+.shimmer-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+@media (max-width: 768px) {
+
+  .spacer-header {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .background-section h1 {
+    font-size: 2.75rem;
+  }
+}
 

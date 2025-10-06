@@ -1,132 +1,63 @@
-import React from 'react';
+import React from "react";
 import { Helmet } from "react-helmet";
-import { Container, Card, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
-import './azienda.css'
+import AziendaWallpaper from "./AziendaWallpaper";
+import CardRagioni from "./CardRagioni";
+import CertificazioniSection from "./CertificazioniSection";
+import MyContactFooter from "../components/contact-footer/contact-footer";
+import MyFooter from "../components/footer/myfooter";
 
-import MyFooter from '../components/footer/myfooter';
-
-
-function AziendaWallpaper() {
-  return(
-    <div className='background-azienda'>
-      <Container>
-        <Row className='align-items-center justify-content-md-center'>
-            <Col md='auto' className='text-center mt-5 mb-5'>
-              <h1><strong>Benvenuti in KESTREL INTELLIGENCE</strong></h1>
-              <h3 className='mt-4'>Guidando l'Innovazione attraverso i Dati e l'Intelligenza Artificiale</h3>
-              <p className='mt-4 mb-4'>Siamo entusiasti di darvi il benvenuto nel mondo di Kestrel Intelligence, una realtà che guida l'innovazione attraverso l'analisi dei dati e l'intelligenza artificiale.
-                 Presso Kestrel Intelligence, ci impegniamo a offrire soluzioni all'avanguardia che trasformano i dati in insight preziosi, permettendo alle aziende di prendere decisioni informate e di anticipare le sfide del futuro.
-              </p>
-            </Col>
-        </Row>
-      </Container>
-    </div>
-  );
-}
-
-function CardRagioni() {
-
-  return (
-
-    <div>
-
-      <Row className='mt-3'>
-        <Col md={6}>
-          <Card className='card-style'>
-            <Card.Body>
-              <Card.Title><strong>Competenza tecnica</strong></Card.Title>
-              <Card.Text>
-              Il nostro team è composto da professionisti altamente qualificati con esperienza nel campo dell'analisi dei dati e dell'intelligenza artificiale. 
-              Siamo appassionati di ciò che facciamo e ci impegniamo costantemente a rimanere aggiornati sulle ultime tecnologie e tendenze del settore
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row className='mt-3'>
-        <Col md={{ span: 6, offset: 6 }}>
-          <Card className='card-style'>
-            <Card.Body>
-              <Card.Title><strong>Approccio orientato ai risultati</strong></Card.Title>
-              <Card.Text>
-              Il nostro obiettivo principale è fornire valore tangibile ai nostri clienti. 
-              Lavoriamo fianco a fianco con loro per capire le loro esigenze specifiche e sviluppare soluzioni su misura che producano risultati misurabili e significativi.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>    
-
-      <Row className='mt-3'>
-        <Col md={6}>
-          <Card className='card-style'>
-            <Card.Body>
-              <Card.Title><strong>Innovazione continua</strong></Card.Title>
-              <Card.Text>
-              Siamo guidati dalla passione per l'innovazione e la ricerca di soluzioni creative ai problemi complessi. 
-              Non ci accontentiamo mai dello status quo e siamo costantemente alla ricerca di nuovi modi per migliorare e superare le aspettative dei nostri clienti.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row className='mt-3'>
-        <Col md={{ span: 6, offset: 6 }}>
-          <Card className='card-style'>
-            <Card.Body>
-              <Card.Title><strong>Impegno verso l'eccellenza</strong></Card.Title>
-              <Card.Text>
-              La qualità è al centro di tutto ciò che facciamo. Ci impegniamo per l'eccellenza in ogni fase del nostro lavoro, 
-              dall'analisi iniziale alla consegna finale del prodotto, garantendo che ogni soluzione soddisfi gli standard più elevati.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>   
-
-    </div>
-  );
-
-}
-
+import "./azienda.css";
 
 function Azienda() {
   return (
-    
-      <div className='new-font'>
+    <div className="new-font">
+      <Helmet>
+        <title>Kestrel Intelligence | Azienda di consulenza AI, dati e automazione</title>
+        <meta
+          name="description"
+          content="Kestrel Intelligence: professionisti certificati AWS e iscritti all’Ordine degli Ingegneri, esperti in AI, analisi dati e automazione. Con sede in Piemonte tra Cuneo e Torino."
+        />
+        <meta
+          name="keywords"
+          content="Kestrel Intelligence, consulenza AI, intelligenza artificiale, analisi dati, automazione, AWS Certified, Piemonte, Cuneo, Torino"
+        />
+      </Helmet>
 
-        <Helmet>
-          <title>Azienda</title>
-          <meta
-            name="description"
-            content="Benvenuti in Kestrel Intelligence, esperti in consulenza ai e analisi dei dati per ottimizzazione aziendale e soluzioni personalizzate in Piemonte e oltre."
-          />
-        </Helmet>
+      <main>
+        <AziendaWallpaper />
 
-        <AziendaWallpaper></AziendaWallpaper>
+        {/* SEZIONE RAGIONI */}
+        <section id="valori" className="spacer-header fade-in">
+          <Container>
+            <Row className="text-center mb-4">
+              <Col>
+                <h2 className="perche-noi-title">
+                  <strong>Perché scegliere noi?</strong>
+                </h2>
+                <p className="section-subtitle">
+                  Esperienza, metodo e innovazione al servizio della crescita digitale.
+                </p>
+              </Col>
+            </Row>
 
-        <Container>
+            <CardRagioni />
+          </Container>
+        </section>
 
-         <Row className='mt-5 mb-5'>
-            <Col className='text-center'>
-                <h2><strong>Perché scegliere noi?</strong></h2>
-            </Col>
-          </Row>
+        {/* SEZIONE CERTIFICAZIONI */}
+        <section id="certificazioni" className="section-spacing fade-in">
+          <Container>
+            <CertificazioniSection />
+          </Container>
+        </section>
 
-          <CardRagioni></CardRagioni>
+        <MyContactFooter />
+      </main>
 
-          <Row className='mt-5 mb-5'></Row>
-
-        </Container>
-
-        <MyFooter></MyFooter>
-
-      </div>
-
-
+      <MyFooter />
+    </div>
   );
 }
 

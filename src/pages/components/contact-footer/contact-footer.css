@@ -1,4 +1,32 @@
 .contact-footer-css {
-    background-color: #8daaa6;
-    color: #fff;
-  }
+  background: #ffffff;
+}
+
+.contact-footer-css section.contact-footer-section {
+  background: linear-gradient(135deg, #8daaa6 0%, #7d9b97 100%);
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.contact-footer-css strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-footer-text {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* Testo bottone */
+.contact-footer-css .shimmer-button span.button-text {
+  color: #1f1f1f !important;
+}
+
+.contact-footer-css .shimmer-button .button-text strong {
+  color: #1f1f1f !important;
+}
+
+.contact-footer-css .shimmer-button {
+  color: #1f1f1f !important;
+}

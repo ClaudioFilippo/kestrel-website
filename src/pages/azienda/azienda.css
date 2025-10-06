@@ -1,3 +1,71 @@
+/* ======================================
+   PALETTE AZIENDALE
+====================================== */
+:root {
+  --color-primary: #557570;
+  --color-secondary: #8daaa6;
+  --color-light: #f6f8f7;
+  --color-dark: #1f1f1f;
+}
+
 .background-azienda {
-    background: #8daaa6;
+  background: #8daaa6;
+  color: #ffffff;
+}
+
+/* ======================================
+   TITOLI E TESTI
+====================================== */
+.perche-noi-title {
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+
+/* ======================================
+   CERTIFICAZIONI SECTION
+====================================== */
+.aws-logo {
+  max-width: 180px;
+  margin-top: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease;
+}
+
+.aws-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ======================================
+   ANIMAZIONI
+====================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+@media (max-width: 768px) {
+  .perche-noi-title {
+    font-size: 1.5rem;
+  }
 }

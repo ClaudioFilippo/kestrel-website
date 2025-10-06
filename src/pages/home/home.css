@@ -1,44 +1,118 @@
 .background-home {
     background: #8daaa6;
+    color: #ffffff;
 }
 
-.spacer-header {
-    margin-top: 5rem;
-    margin-bottom: 4rem;
-
-
+/* ---- TIMELINE SECTION ---- */
+.workflow-section {
+  position: relative;
 }
 
-.card-style {
-    background-color: #b2d0cc !important; 
+.timeline {
+  position: relative;
+  padding-left: 70px; /* più spazio per icone grandi */
+  overflow: hidden;
 }
 
+/* Linea verticale animata */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 33px; /* centrata rispetto all'icona */
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #8daaa6 0%, #557570 100%);
+  opacity: 0.6;
+  border-radius: 2px;
+  z-index: 0;
 
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: drawLine 1.8s ease-out forwards;
+}
 
-/* Shimmer buttom */
-.shimmer-button {
-    color: black !important;
-    background-color: #c8c7c7 !important;
-    overflow: hidden;
-    transition: background 0.3s ease-in-out;
+/* Effetto di disegno */
+@keyframes drawLine {
+  to {
+    transform: scaleY(1);
   }
-  
-  .shimmer-effect {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    animation: shimmer 1.5s infinite linear;
+}
+
+/* Ogni step */
+.timeline-item {
+  position: relative;
+  margin-bottom: 55px;
+  padding-left: 40px;
+  z-index: 1;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Icona */
+.timeline-icon {
+  position: absolute;
+  left: 10px; /* prima era -5px: ora è più allineata */
+  top: 0;
+  background: linear-gradient(135deg, #8daaa6, #557570);
+  color: #fff;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 5px #eaf2f1;
+  z-index: 2;
+  font-size: 1.1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-icon:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 6px #dbe8e6;
+}
+
+/* Contenuto */
+.timeline-content {
+  margin-left: 35px; /* aggiunto per separare testo e icona */
+}
+
+.timeline-content h5 {
+  color: #557570;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  color: #444;
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .timeline {
+    padding-left: 0;
   }
-  
-  @keyframes shimmer {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 100%;
-    }
+
+  .timeline::before {
+    display: none;
   }
- 
+
+  .timeline-item {
+    text-align: center;
+  }
+
+  .timeline-icon {
+    position: static;
+    margin: 0 auto 12px;
+  }
+
+  .timeline-content {
+    margin-left: 35;
+  }
+}
