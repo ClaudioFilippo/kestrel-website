@@ -1,6 +1,114 @@
+/* ---- HERO / HOME SECTION ---- */
 .background-home {
-    background: #8daaa6;
-    color: #ffffff;
+  background: #8daaa6;
+  color: #ffffff;
+  overflow: hidden; /* impedisce all’immagine di uscire dallo sfondo */
+  position: relative;
+  padding: 5rem 0;
+  width: 100%;
+  max-width: 100vw; /* 🔧 evita sforamenti su iPhone */
+}
+
+.background-home .container {
+  position: relative;
+  z-index: 2;
+  overflow: hidden; /* 🔧 blocca margini negativi Bootstrap */
+}
+
+.background-home h1 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.background-home p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.background-home .btn {
+  position: relative;
+  z-index: 3;
+}
+
+/* Immagine principale */
+.background-home img,
+.homepage-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: translateZ(0); /* 🔧 forza rendering hardware per Safari */
+}
+
+/* Effetto contrasto testo sopra background */
+.background-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent; /* niente scurimento */
+  z-index: 1;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 767px) {
+  .background-home {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    overflow-x: hidden; /* 🔧 evita scroll orizzontale su Safari */
+  }
+
+  .background-home h1 {
+    font-size: 1.8rem;
+  }
+
+  .background-home p {
+    font-size: 1rem;
+  }
+
+  .background-home img,
+  .homepage-image {
+    max-width: 80%;
+    margin-top: 1.5rem;
+  }
+}
+
+/* 🔧 Specifico per schermi molto piccoli (come 360x740 o iPhone SE) */
+@media (max-width: 420px) {
+  .background-home {
+    padding: 2.5rem 1rem;
+  }
+
+  .background-home h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .background-home p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .background-home img,
+  .homepage-image {
+    max-width: 60%; /* 👈 immagine più piccola su iPhone */
+    margin-top: 1rem;
+  }
+
+  .background-home .btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* 🔧 FIX globale per scroll orizzontale su iPhone/Safari */
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
 }
 
 /* ---- TIMELINE SECTION ---- */
@@ -26,7 +134,6 @@
   opacity: 0.6;
   border-radius: 2px;
   z-index: 0;
-
   transform: scaleY(0);
   transform-origin: top;
   animation: drawLine 1.8s ease-out forwards;
@@ -54,7 +161,7 @@
 /* Icona */
 .timeline-icon {
   position: absolute;
-  left: 10px; /* prima era -5px: ora è più allineata */
+  left: 10px;
   top: 0;
   background: linear-gradient(135deg, #8daaa6, #557570);
   color: #fff;
@@ -77,7 +184,7 @@
 
 /* Contenuto */
 .timeline-content {
-  margin-left: 35px; /* aggiunto per separare testo e icona */
+  margin-left: 35px;
 }
 
 .timeline-content h5 {
@@ -93,7 +200,7 @@
   line-height: 1.7;
 }
 
-/* Responsive */
+/* Responsive Timeline */
 @media (max-width: 767px) {
   .timeline {
     padding-left: 0;
@@ -113,6 +220,6 @@
   }
 
   .timeline-content {
-    margin-left: 35;
+    margin-left: 0;
   }
 }

@@ -27,7 +27,7 @@ function HomePage() {
         />
       </Helmet>
 
-      <section className="background-section text-light py-5">
+      <section className="background-home text-light py-5">
         <Container>
           <Row className="align-items-center">
             {/* Testo */}
@@ -63,7 +63,7 @@ function HomePage() {
                 roundedCircle
                 loading="lazy"
                 className="shadow-lg"
-                style={{ maxWidth: "500px" }}
+                style={{ maxWidth: "400px" }}
               />
             </Col>
           </Row>
