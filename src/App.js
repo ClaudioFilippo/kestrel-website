@@ -6,6 +6,7 @@ import ScrollToTop  from './pages/components/scroll-top-page/scroll-top-page';
 import MyNavbar from './pages/components/navbar/mynavbar';
 import HomePage from './pages/home/HomePage';
 import Azienda from './pages/azienda/AziendaPage';
+import Progetti from './pages/progetti/ProgettiPage';
 import Contatti from './pages/contatti/ContattiPage';
 
 import CookiePolicy from "./documents/cookie-policy"
@@ -30,6 +31,7 @@ function App() {
           <Route path="/kestrel-website" exact element={<HomePage />} />
           <Route path="/" exact element={<HomePage />} />
           <Route path="/azienda" exact element={<Azienda />} />
+          <Route path="/progetti" exact element={<Progetti />} />
           <Route path="/contatti" exact element={<Contatti />} />
 
           <Route path="/cookie-policy" exact element={<CookiePolicy />} />

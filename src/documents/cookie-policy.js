@@ -54,7 +54,7 @@ function CookiePolicy() {
 					<li><strong>Web beacons:</strong> rientrano in questa categoria i frammenti di codice che consentono a un sito web di trasferire o raccogliere informazioni attraverso la richiesta di un'immagine grafica. I siti web possono utilizzarli per diversi fini, quali l'analisi dell'uso dei siti web, attività di controllo e reportistica sulle pubblicità e la personalizzazione di pubblicità e contenuti.</li>
 				</ul>
 				<p>L'utilizzo dei cookies di profilazione necessita dell'acquisizione preventiva del libero consenso informato dell'utente, il quale potrà revocare tale consenso in ogni momento. Il diniego del consenso all'utilizzo dei cookie di profilazione non interferirà sulla possibilità di accedere al sito web, salvo l'impossibilità di accedere a quelle funzioni o contenuti che fanno utilizzo di tali cookie.</p>
-				<p >Per maggiori informazioni in merito agli Advertising e Targeting cookie e su come si possano disabilitare, si consigliano i seguenti siti: <a href="http://www.youronlinechoices.com/uk/your-ad-choices">http://www.youronlinechoices.com/uk/your-ad-choices</a> e <a href="http://www.allaboutcookies.org/manage-cookies/index.html" target="_blank">http://www.allaboutcookies.org/manage-cookies/index.html</a>.</p>
+				<p >Per maggiori informazioni in merito agli Advertising e Targeting cookie e su come si possano disabilitare, si consigliano i seguenti siti: <a href="http://www.youronlinechoices.com/uk/your-ad-choices" target="_blank" rel="noopener noreferrer">http://www.youronlinechoices.com/uk/your-ad-choices</a> e <a href="http://www.allaboutcookies.org/manage-cookies/index.html" target="_blank" rel="noopener noreferrer">http://www.allaboutcookies.org/manage-cookies/index.html</a>.</p>
 
 				<h5>Cookie di terze parti</h5>
 				<p >I cookies di terzi sono volti a creare profili relativi all'utente al fine di inviare messaggi commerciali che incontrano le preferenze manifestate durante la visita o per migliorare l'esperienza di navigazione. Questi cookie permettono di offrire proposte commerciali su altri siti web affiliati (retargeting). Sui cookie di terze parti non si ha il controllo delle informazioni fornite dal cookie. Queste informazioni sono controllate totalmente dalle società terze secondo quanto descritto nelle rispettive policy.</p>
@@ -71,11 +71,11 @@ function CookiePolicy() {
 				<h3>CONFIGURAZIONE BROWSER</h3>
 				<p>La maggior parte dei browser è configurata per accettare, controllare o eventualmente disabilitare i cookie attraverso le impostazioni. Ti ricordiamo tuttavia che disabilitare i cookie di navigazione o quelli funzionali può causare un insoddisfacente funzionamento del sito e/o limitare il servizio che offriamo. Di seguito il percorso da seguire per gestire i cookie dai seguenti browser:</p>
 				<ul>
-					<li><a href="https://support.google.com/chrome/answer/95647?hl=it-IT&hlrm=fr&hlrm=en">Chrome</a></li>
-					<li><a href="https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox-desktop?redirectslug=Attivare+e+disattivare+i+cookie&redirectlocale=it">Firefox</a></li>
-					<li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09#:~:text=In%20Edge%20seleziona%20Impostazioni%20e%20altre%20%3E%20Impostazioni%20%3E%20Cookie%20e%20autorizzazioni,cui%20vuoi%20eliminare%20i%20cookie.">Edge</a></li>
-					<li><a href="https://support.microsoft.com/it-it/windows/eliminare-e-gestire-i-cookie-168dab11-0753-043d-7c16-ede5947fc64d">Internet Explorer</a></li>
-					<li><a href="https://support.apple.com/kb/PH21411?locale=it_IT">Safari</a></li>
+					<li><a href="https://support.google.com/chrome/answer/95647?hl=it-IT&hlrm=fr&hlrm=en" target="_blank" rel="noopener noreferrer">Chrome</a></li>
+					<li><a href="https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox-desktop?redirectslug=Attivare+e+disattivare+i+cookie&redirectlocale=it" target="_blank" rel="noopener noreferrer">Firefox</a></li>
+					<li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09#:~:text=In%20Edge%20seleziona%20Impostazioni%20e%20altre%20%3E%20Impostazioni%20%3E%20Cookie%20e%20autorizzazioni,cui%20vuoi%20eliminare%20i%20cookie." target="_blank" rel="noopener noreferrer">Edge</a></li>
+					<li><a href="https://support.microsoft.com/it-it/windows/eliminare-e-gestire-i-cookie-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">Internet Explorer</a></li>
+					<li><a href="https://support.apple.com/kb/PH21411?locale=it_IT" target="_blank" rel="noopener noreferrer">Safari</a></li>
 				</ul>
 
 				<h3>COOKIE PRESENTI IN QUESTO SITO</h3>

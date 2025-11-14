@@ -36,10 +36,10 @@ function MyFooter() {
                         <h4>Seguici sui Social</h4>
                         <div className='mt-2 mb-2 widget-separator'/>
                         <Row>
-                            <a href="https://www.linkedin.com/company/kestrel-intelligence-it" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="3x" className='documents-link'/></a>
+                            <a href="https://www.linkedin.com/company/kestrel-intelligence-it" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size="3x" className='documents-link'/></a>
                         </Row>
                         <Row>
-                            <a href="https://www.instagram.com/kestrelintelligence/#" target="_blank"><FontAwesomeIcon icon={faInstagram} size="3x" className='documents-link'/></a>
+                            <a href="https://www.instagram.com/kestrelintelligence/#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} size="3x" className='documents-link'/></a>
                         </Row>
                     </Col>
                     <Col md={4} className='mt-3 mb-4'>
@@ -62,9 +62,7 @@ function MyFooter() {
                 <Row>
                     <Col className='text-center'>
                         <p>
-                            <NavLink to='/privacy-policy' className='documents-link'>PRIVACY POLICY</NavLink> 
-                            <a> - </a>    
-                            <NavLink to="/cookie-policy" className='documents-link'>COOKIE POLICY</NavLink>
+                            <NavLink to='/privacy-policy' className='documents-link'>PRIVACY POLICY</NavLink> - <NavLink to="/cookie-policy" className='documents-link'>COOKIE POLICY</NavLink>
                         </p>   
                     </Col> 
                 </Row>

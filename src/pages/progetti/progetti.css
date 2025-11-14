@@ -1,0 +1,23 @@
+/* Frecce più visibili e dinamiche */
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.6); /* chiaro di default */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 50%, 50%;
+  transition: background-color 0.3s ease;
+}
+
+.custom-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6); /* più scuro al passaggio del mouse */
+}

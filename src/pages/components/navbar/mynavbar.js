@@ -20,6 +20,7 @@ function MyNavbar() {
             <Navbar.Collapse id="navbarScroll">
                 <Nav className="justify-content-end flex-grow-1 pe-5 gap-3 size-navlink" style={{ maxHeight: '100px' }} navbarScroll>
                     <Nav.Link as={NavLink} to='/azienda'><strong>Azienda</strong></Nav.Link>
+                    <Nav.Link as={NavLink} to='/progetti'><strong>Progetti</strong></Nav.Link>
                     <Nav.Link as={NavLink} to='/contatti'><strong>Contatti</strong></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
