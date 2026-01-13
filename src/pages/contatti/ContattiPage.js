@@ -1,6 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { Container, Form, Button, Spinner, Row, Stack, Modal } from "react-bootstrap";
+import {
+  Container,
+  Form,
+  Button,
+  Spinner,
+  Row,
+  Stack,
+  Modal,
+} from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faDownLong } from "@fortawesome/free-solid-svg-icons";
@@ -10,15 +18,20 @@ import "./contatti.css";
 
 function Contatti() {
   const form = useRef();
+
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
   const handleClose = () => setShowModal(false);
+
+  const generateCode = () =>
+    Math.floor(1000 + Math.random() * 9000).toString();
 
   const [verificationCode, setVerificationCode] = useState("");
   const [userCodeInput, setUserCodeInput] = useState("");
 
   useEffect(() => {
-    setVerificationCode(Math.floor(1000 + Math.random() * 9000).toString());
+    setVerificationCode(generateCode());
   }, []);
 
   const [formValues, setFormValues] = useState({
@@ -33,15 +46,24 @@ function Contatti() {
     e.preventDefault();
     setIsLoading(true);
 
+    // 🛡️ Honeypot anti-bot
+    if (form.current.company_website?.value) {
+      setIsLoading(false);
+      return;
+    }
+
+    // 🔢 Codice di verifica
     if (userCodeInput !== verificationCode) {
       alert("Codice di verifica errato. Riprova.");
-      setVerificationCode(Math.floor(1000 + Math.random() * 9000).toString());
+      setUserCodeInput("");
+      setVerificationCode(generateCode());
       setIsLoading(false);
       return;
     }
 
     try {
       emailjs.init("RI4JxwUcoDQK46rD_");
+
       emailjs
         .sendForm("service_3ddz1jw", "template_ss6myg9", form.current)
         .then(() => {
@@ -60,10 +82,11 @@ function Contatti() {
         messaggio: "",
         checkbox: false,
       });
+
       setUserCodeInput("");
-      setVerificationCode(Math.floor(1000 + Math.random() * 9000).toString());
+      setVerificationCode(generateCode());
     } catch (error) {
-      console.log(error);
+      console.error(error);
       setIsLoading(false);
     }
   };
@@ -83,14 +106,22 @@ function Contatti() {
         <Container>
           <Row className="justify-content-center">
             <h1 className="fw-bold mb-4">
-              Contatta <span className="highlighted-white">KESTREL INTELLIGENCE</span>
+              Contatta{" "}
+              <span className="highlighted-white">
+                KESTREL INTELLIGENCE
+              </span>
             </h1>
             <h3 className="mb-3">
               Siamo pronti ad accompagnarti nel tuo percorso di innovazione
             </h3>
             <p className="mb-3" style={{ maxWidth: "1000px" }}>
-              Desideri scoprire come <strong>intelligenza artificiale</strong>, <strong>automazione</strong> e <strong>analisi dei dati</strong> possano far crescere la tua impresa?
-              Insieme possiamo creare <strong>soluzioni su misura</strong>, pensate per portare risultati reali e duraturi.      
+              Desideri scoprire come{" "}
+              <strong>intelligenza artificiale</strong>,{" "}
+              <strong>automazione</strong> e{" "}
+              <strong>analisi dei dati</strong> possano far crescere la tua
+              impresa? Insieme possiamo creare{" "}
+              <strong>soluzioni su misura</strong>, pensate per portare risultati
+              reali e duraturi.
             </p>
           </Row>
         </Container>
@@ -106,92 +137,147 @@ function Contatti() {
         <hr className="contact-divider my-5" />
 
         <div className="text-center mt-5 mb-4">
-          <h4 className="form-title-decorated">In alternativa, compila il modulo</h4>
+          <h4 className="form-title-decorated">
+            In alternativa, compila il modulo
+          </h4>
         </div>
 
         <div className="text-center mb-4">
-          <FontAwesomeIcon icon={faDownLong} size="2xl" className="text-muted" />
+          <FontAwesomeIcon
+            icon={faDownLong}
+            size="2xl"
+            className="text-muted"
+          />
         </div>
 
         <Stack gap={2} className="col-md-6 mx-auto stack-style">
           <Form ref={form} onSubmit={sendEmail}>
-            <Form.Group className="mb-3" controlId="formGroupName">
+            {/* 🛡️ Honeypot invisibile */}
+            <input
+              type="text"
+              name="company_website"
+              style={{ display: "none" }}
+              tabIndex="-1"
+              autoComplete="off"
+            />
+
+            <Form.Group className="mb-3">
               <Form.Label>Nome e cognome *</Form.Label>
               <Form.Control
                 required
                 name="mittente"
                 placeholder="Inserisci il tuo nome e cognome"
                 value={formValues.mittente}
-                onChange={(e) => setFormValues({ ...formValues, mittente: e.target.value })}
+                onChange={(e) =>
+                  setFormValues({
+                    ...formValues,
+                    mittente: e.target.value,
+                  })
+                }
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formGroupCompany">
+            <Form.Group className="mb-3">
               <Form.Label>Azienda *</Form.Label>
               <Form.Control
                 required
                 name="azienda"
                 placeholder="Inserisci il nome dell’azienda"
                 value={formValues.azienda}
-                onChange={(e) => setFormValues({ ...formValues, azienda: e.target.value })}
+                onChange={(e) =>
+                  setFormValues({
+                    ...formValues,
+                    azienda: e.target.value,
+                  })
+                }
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formGroupMail">
+            <Form.Group className="mb-3">
               <Form.Label>Email *</Form.Label>
               <Form.Control
                 required
-                name="email"
                 type="email"
+                name="email"
                 placeholder="Inserisci la tua email"
                 value={formValues.email}
-                onChange={(e) => setFormValues({ ...formValues, email: e.target.value })}
+                onChange={(e) =>
+                  setFormValues({
+                    ...formValues,
+                    email: e.target.value,
+                  })
+                }
               />
             </Form.Group>
 
-            <Form.Group className="mb-4" controlId="formGroupTextAreaRequest">
+            <Form.Group className="mb-4">
               <Form.Label>Richiesta</Form.Label>
               <Form.Control
-                name="messaggio"
                 as="textarea"
                 rows={4}
+                name="messaggio"
                 placeholder="Scrivi qui la tua richiesta..."
                 value={formValues.messaggio}
-                onChange={(e) => setFormValues({ ...formValues, messaggio: e.target.value })}
+                onChange={(e) =>
+                  setFormValues({
+                    ...formValues,
+                    messaggio: e.target.value,
+                  })
+                }
               />
             </Form.Group>
 
-            <Form.Group className="mb-4" controlId="formGroupCode">
+            <Form.Group className="mb-4">
               <Form.Label>Codice di verifica *</Form.Label>
               <div className="d-flex align-items-center">
                 <Form.Control
                   required
-                  type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]{4}"
+                  maxLength={4}
                   placeholder="Inserisci il codice"
                   value={userCodeInput}
-                  onChange={(e) => setUserCodeInput(e.target.value)}
+                  onChange={(e) =>
+                    setUserCodeInput(e.target.value.replace(/\D/g, ""))
+                  }
                   className="me-3"
                   style={{ maxWidth: "220px" }}
                 />
-                <span className="fw-bold fs-5">{verificationCode}</span>
+                <span className="fw-bold fs-5">
+                  {verificationCode}
+                </span>
               </div>
             </Form.Group>
 
-            <Form.Group className="mb-5" id="formGridCheckbox">
+            <Form.Group className="mb-5">
               <Form.Check
                 required
                 type="checkbox"
                 checked={formValues.checkbox}
-                onChange={(e) => setFormValues({ ...formValues, checkbox: e.target.checked })}
+                onChange={(e) =>
+                  setFormValues({
+                    ...formValues,
+                    checkbox: e.target.checked,
+                  })
+                }
                 label="Acconsento al trattamento dei miei dati personali ai sensi dell’art. 13 del Reg. (UE) 2016/679 (GDPR)."
               />
             </Form.Group>
 
             <div className="text-center">
-              <Button type="submit" disabled={isLoading} className="classic-submit-button">
+              <Button
+                type="submit"
+                disabled={isLoading}
+                className="classic-submit-button"
+              >
                 {isLoading ? (
                   <>
-                    <Spinner as="span" animation="border" size="sm" className="me-2" />
+                    <Spinner
+                      as="span"
+                      animation="border"
+                      size="sm"
+                      className="me-2"
+                    />
                     Invio in corso...
                   </>
                 ) : (
@@ -200,15 +286,21 @@ function Contatti() {
               </Button>
             </div>
 
-            <Form.Text className="text-muted mt-3 d-block text-center">* Campi obbligatori</Form.Text>
+            <Form.Text className="text-muted mt-3 d-block text-center">
+              * Campi obbligatori
+            </Form.Text>
           </Form>
         </Stack>
 
         <Modal show={showModal} onHide={handleClose} centered>
           <Modal.Header closeButton>
-            <Modal.Title>Messaggio inviato correttamente</Modal.Title>
+            <Modal.Title>
+              Messaggio inviato correttamente
+            </Modal.Title>
           </Modal.Header>
-          <Modal.Body>Ti ricontatteremo al più presto. Grazie per averci scritto!</Modal.Body>
+          <Modal.Body>
+            Ti ricontatteremo al più presto. Grazie per averci scritto!
+          </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Chiudi
