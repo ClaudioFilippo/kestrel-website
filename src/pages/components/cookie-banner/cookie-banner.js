@@ -9,7 +9,7 @@ export default function CookieBanner() {
     const consentDate = localStorage.getItem("cookieBannerAcceptedAt");
   
     if (consentDate) {
-      const oneYear = 1000 * 60 ; // 1 anno in ms
+      const oneYear = 1000 * 60 * 60 * 24 * 365; // 1 anno in ms
       const now = new Date().getTime();
       const then = new Date(consentDate).getTime();
   
