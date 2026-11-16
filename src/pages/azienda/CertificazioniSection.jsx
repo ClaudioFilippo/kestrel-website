@@ -3,6 +3,7 @@ import { Row, Col, Card, Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCertificate, faMedal, faMapMarkerAlt, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import AWSLogoSAA from "../../images/aws-certified-solutions-architect-associate.png";
+import AWSLogoMLA from "../../images/aws-certified-machine-learning-engineer-associate.png";
 
 function CertificazioniSection() {
   return (
@@ -21,8 +22,9 @@ function CertificazioniSection() {
 
             <Card.Text className="text-muted mb-4">
               <FontAwesomeIcon icon={faMedal} className="icon-analytics me-2" />
-              Siamo <strong>professionisti certificati AWS Solution Architect</strong>, a garanzia di qualità tecnica e capacità di progettare
-              architetture cloud scalabili e sicure.
+              Siamo <strong>professionisti certificati AWS Solutions Architect</strong> e <strong>AWS Machine Learning Engineer</strong>,
+              a garanzia di qualità tecnica e capacità di progettare architetture cloud scalabili e sicure e soluzioni di
+              machine learning pronte per la produzione.
             </Card.Text>
 
             <Card.Text className="text-muted mb-4">
@@ -38,13 +40,18 @@ function CertificazioniSection() {
               Crediamo nel valore della <strong>prossimità e del dialogo diretto</strong>, fondamentali per costruire soluzioni su misura.
             </Card.Text>
 
-            <div className="aws-logo-container mt-4">
-              <Image 
+            <div className="aws-logo-container mt-4 d-flex flex-wrap justify-content-center align-items-center gap-4">
+              <Image
                 src={AWSLogoSAA}
-                alt="AWS Certified Solution Architect"
+                alt="AWS Certified Solutions Architect – Associate"
                 className="aws-logo"
-                fluid
-                style={{ maxWidth: "180px", filter: "drop-shadow(0 0 4px rgba(0,0,0,0.2))" }}
+                loading="lazy"
+              />
+              <Image
+                src={AWSLogoMLA}
+                alt="AWS Certified Machine Learning Engineer – Associate"
+                className="aws-logo"
+                loading="lazy"
               />
             </div>
           </Card.Body>

@@ -34,7 +34,8 @@
    CERTIFICAZIONI SECTION
 ====================================== */
 .aws-logo {
-  max-width: 180px;
+  width: 150px;
+  height: auto;
   margin-top: 1rem;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
   transition: transform 0.3s ease;
