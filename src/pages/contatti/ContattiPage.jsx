@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import {
   Container,
   Form,
@@ -93,13 +92,13 @@ function Contatti() {
 
   return (
     <div className="new-font">
-      <Helmet>
+      <>
         <title>Kestrel Intelligence | Contatti</title>
         <meta
           name="description"
           content="Contatta Kestrel Intelligence: consulenza in AI, automazione e analisi dati per imprese. Parliamo del tuo progetto."
         />
-      </Helmet>
+      </>
 
       {/* Intro */}
       <div className="background-section text-center py-5">

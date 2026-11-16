@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from "react-helmet";
 
 import { Container } from "react-bootstrap";
 
@@ -8,9 +7,9 @@ function CookiePolicy() {
 	return (
 
 		<>
-			<Helmet>
+			<>
 				<title>Cookie Policy</title>
-			</Helmet>
+			</>
 
 			<Container>
 

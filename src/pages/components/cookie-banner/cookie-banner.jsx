@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);

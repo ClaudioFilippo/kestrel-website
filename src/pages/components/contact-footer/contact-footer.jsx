@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 import './contact-footer.css';

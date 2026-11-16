@@ -1,6 +1,5 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { NavLink } from "react-router";
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 
 import HomePageWallpaper from "../../images/homepage.jpg";
@@ -15,7 +14,7 @@ import './home.css';
 function HomePage() {
   return (
     <div className="new-font">
-      <Helmet>
+      <>
         <title>Kestrel Intelligence | Consulenza AI, Dati e Automazione</title>
         <meta
           name="description"
@@ -25,7 +24,7 @@ function HomePage() {
           name="keywords"
           content="AI, intelligenza artificiale, analisi dati, automazione, consulenza, Kestrel Intelligence"
         />
-      </Helmet>
+      </>
 
       <section className="background-home text-light py-5">
         <Container>

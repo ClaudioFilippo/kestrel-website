@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router";
 
 import ScrollToTop  from './pages/components/scroll-top-page/scroll-top-page';
 
@@ -28,14 +28,14 @@ function App() {
         <RenderNavbar />
         
         <Routes>
-          <Route path="/kestrel-website" exact element={<HomePage />} />
-          <Route path="/" exact element={<HomePage />} />
-          <Route path="/azienda" exact element={<Azienda />} />
-          <Route path="/progetti" exact element={<Progetti />} />
-          <Route path="/contatti" exact element={<Contatti />} />
+          <Route path="/kestrel-website" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/azienda" element={<Azienda />} />
+          <Route path="/progetti" element={<Progetti />} />
+          <Route path="/contatti" element={<Contatti />} />
 
-          <Route path="/cookie-policy" exact element={<CookiePolicy />} />
-          <Route path="/privacy-policy" exact element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
 
       </BrowserRouter>

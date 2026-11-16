@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Container, Row, Col } from "react-bootstrap";
 
 import AziendaWallpaper from "./AziendaWallpaper";
@@ -13,7 +12,7 @@ import "./azienda.css";
 function Azienda() {
   return (
     <div className="new-font">
-      <Helmet>
+      <>
         <title>Kestrel Intelligence | Azienda di consulenza AI, dati e automazione</title>
         <meta
           name="description"
@@ -23,7 +22,7 @@ function Azienda() {
           name="keywords"
           content="Kestrel Intelligence, consulenza AI, intelligenza artificiale, analisi dati, automazione, AWS Certified, Piemonte, Cuneo, Torino"
         />
-      </Helmet>
+      </>
 
       <main>
         <AziendaWallpaper />

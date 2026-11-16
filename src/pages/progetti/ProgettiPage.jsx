@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
 import ProgettiWallpaper from "./ProgettiWallpaper";
 import MyContactFooter from "../components/contact-footer/contact-footer";
@@ -25,7 +24,7 @@ const projects = [
 const ProgettiPage = () => {
   return (
     <div className="new-font">
-      <Helmet>
+      <>
         <title>Kestrel Intelligence | Progetti e Collaborazioni</title>
         <meta
           name="description"
@@ -37,7 +36,7 @@ const ProgettiPage = () => {
         />
         <meta property="og:title" content="Progetti e Collaborazioni | Kestrel Intelligence" />
         <meta property="og:description" content="Esplora le nostre proposte di collaborazione in AI, analisi dati e automazione. Contattaci tramite il form per maggiori informazioni." />
-      </Helmet>
+      </>
 
       <main>
         {/* Sezione introduttiva generica */}
