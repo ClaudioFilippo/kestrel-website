@@ -28,7 +28,6 @@ function App() {
         <RenderNavbar />
         
         <Routes>
-          <Route path="/kestrel-website" element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/azienda" element={<Azienda />} />
           <Route path="/progetti" element={<Progetti />} />
